@@ -1,28 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: <NAME>
-  namespace: <YOUR NAMESPACE>
+  name: db-deployment
+  namespace: stadakara
   labels:
-    app: <APP>
+    app: db
 spec:
-  replicas: <REPLICAS>
+  replicas: 1
   strategy:
     type: Recreate
   minReadySeconds: 20
   selector:
     matchLabels:
-      app: <APP>
+      app: db
   template:
     metadata:
       labels:
-        app: <APP>
+        app: db
     spec:
       containers:
       - envFrom:
         - secretRef:
             name: db-secret
-        name: <NAME>
-        image: <IMAGE URL>
+        name: db-deployment
+        image: harbor.dev.afsmtddso.com/stadakara-harbor-project/db:3bd0367-6c990d6
         ports:
-        - containerPort: <CONTAINER PORT>
+        - containerPort: 5432>

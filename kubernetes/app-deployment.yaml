@@ -23,6 +23,6 @@ spec:
         - secretRef:
             name: db-secret
         name: <NAME>
-        image: harbor.dev.afsmtddso.com/stadakara-harbor-project/lab-env-repo:1.0
+        image: harbor.dev.afsmtddso.com/stadakara-harbor-project/app:3bd0367-6c990d6
         ports:
         - containerPort: 5432
