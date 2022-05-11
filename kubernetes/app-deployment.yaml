@@ -25,4 +25,4 @@ spec:
         name: app-deployment
         image: harbor.dev.afsmtddso.com/stadakara-harbor-project/app:3bd0367-6c990d6
         ports:
-        - containerPort: 5432
+        - containerPort: 5000
