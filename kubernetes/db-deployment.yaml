@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <NAME>
+  namespace: <YOUR NAMESPACE>
+  labels:
+    app: <APP>
+spec:
+  replicas: <REPLICAS>
+  strategy:
+    type: Recreate
+  minReadySeconds: 20
+  selector:
+    matchLabels:
+      app: <APP>
+  template:
+    metadata:
+      labels:
+        app: <APP>
+    spec:
+      containers:
+      - envFrom:
+        - secretRef:
+            name: db-secret
+        name: <NAME>
+        image: <IMAGE URL>
+        ports:
+        - containerPort: <CONTAINER PORT>
