@@ -1,4 +1,4 @@
---
+--comments are preceded by --
 -- PostgreSQL database dump
 --
 
