@@ -1,7 +1,7 @@
---comments are preceded by --
+--comments are preceded by --changes bystadakara
 -- PostgreSQL database dump
 --
-
+--changes bystadakara
 -- Dumped from database version 9.5.4
 -- Dumped by pg_dump version 9.5.4
 
